@@ -1,7 +1,7 @@
-﻿{
-  "name": "@adi/auth",
+{
+  "name": "@gadagi/auth",
   "version": "1.0.0",
-  "description": "Authentication utilities for adi micro-frontends",
+  "description": "Authentication utilities for gadagi micro-frontends",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -12,14 +12,13 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "webpack --mode production && tsc -p tsconfig.build.json --emitDeclarationOnly",
     "dev": "webpack --mode development --watch",
     "prepublishOnly": "npm run build"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -27,10 +26,10 @@
     "react-router-dom": "^6.0.0"
   },
   "dependencies": {
-    "@adi/types": "^1.0.0"
+    "@gadagi/types": "^1.0.1"
   },
   "devDependencies": {
-    "@types/react": "^19.0.0",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

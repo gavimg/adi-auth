@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { UserRole } from '@adi/types';
+import { UserRole } from '@gadagi/types';
 import { useAuth } from './useAuth';
 
 interface ProtectedRouteProps {
@@ -14,11 +14,11 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   requiredRole,
   redirectTo = '/login',
 }) => {
-  const { isAuthenticated, isLoading, user } = useAuth();
+  const { isAuthenticated, isLogadaging, user } = useAuth();
   const location = useLocation();
 
-  if (isLoading) {
-    return <div>Loading...</div>;
+  if (isLogadaging) {
+    return <div>Logadaging...</div>;
   }
 
   if (!isAuthenticated) {

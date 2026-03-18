@@ -2,7 +2,7 @@
   createContext, useContext, useEffect,
   useReducer, ReactNode,
 } from 'react';
-import { AuthContextValue, AuthState, LoginCredentials } from '@adi/types';
+import { AuthContextValue, AuthState, LoginCredentials } from '@gadagi/types';
 import { authService } from './authService';
 
 type AuthAction =

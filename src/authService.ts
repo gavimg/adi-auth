@@ -1,7 +1,7 @@
-﻿import { AuthToken, LoginCredentials } from '@adi/types';
+﻿import { AuthToken, LoginCredentials } from '@gadagi/types';
 
-const TOKEN_KEY  = 'adi_access_token';
-const REFRESH_KEY = 'adi_refresh_token';
+const TOKEN_KEY  = 'gadagi_access_token';
+const REFRESH_KEY = 'gadagi_refresh_token';
 
 export const authService = {
   async login(credentials: LoginCredentials): Promise<AuthToken> {
