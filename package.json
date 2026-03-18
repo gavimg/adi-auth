@@ -26,7 +26,8 @@
     "react-router-dom": "^6.0.0"
   },
   "dependencies": {
-    "@gadagi/types": "^1.0.1"
+    "@gadagi/types": "^1.0.1",
+    "@gadagi/design-system": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",

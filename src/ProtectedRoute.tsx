@@ -2,6 +2,7 @@
 import { Navigate, useLocation } from 'react-router-dom';
 import { UserRole } from '@gadagi/types';
 import { useAuth } from './useAuth';
+import { colors, spacing } from '@gadagi/design-system';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
@@ -14,11 +15,23 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   requiredRole,
   redirectTo = '/login',
 }) => {
-  const { isAuthenticated, isLogadaging, user } = useAuth();
+  const { isAuthenticated, isLoading, user } = useAuth();
   const location = useLocation();
 
-  if (isLogadaging) {
-    return <div>Logadaging...</div>;
+  if (isLoading) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+        backgroundColor: colors.neutral[50],
+        color: colors.neutral[600],
+        fontSize: '16px',
+      }}>
+        Loading...
+      </div>
+    );
   }
 
   if (!isAuthenticated) {
