@@ -1,0 +1,95 @@
+.auth-form {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--g-color-neutral-50);
+  padding: var(--g-space-6);
+}
+
+.auth-form__card {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--g-space-8);
+  background-color: #fff;
+  border-radius: var(--g-radius-lg);
+  box-shadow: var(--g-shadow-md);
+}
+
+.auth-form__card--wide {
+  max-width: 500px;
+}
+
+.auth-form__header {
+  text-align: center;
+  margin-bottom: var(--g-space-6);
+}
+
+.auth-form__title {
+  font-size: var(--g-font-size-2xl);
+  font-weight: var(--g-font-weight-bold);
+  color: var(--g-color-neutral-800);
+  margin: 0 0 var(--g-space-4);
+}
+
+.auth-form__subtitle {
+  font-size: var(--g-font-size-base);
+  color: var(--g-color-neutral-600);
+  margin: 0;
+}
+
+.auth-form__field {
+  margin-bottom: var(--g-space-4);
+}
+
+.auth-form__label {
+  display: block;
+  font-size: var(--g-font-size-sm);
+  font-weight: var(--g-font-weight-medium);
+  color: var(--g-color-neutral-800);
+  margin-bottom: var(--g-space-2);
+}
+
+.auth-form__error {
+  background-color: var(--g-color-danger-50);
+  color: var(--g-color-danger-800);
+  padding: var(--g-space-3);
+  border-radius: var(--g-radius-md);
+  font-size: var(--g-font-size-sm);
+  margin-bottom: var(--g-space-4);
+}
+
+.auth-form__submit {
+  margin-top: var(--g-space-4);
+}
+
+.auth-form__footer {
+  text-align: center;
+  margin-top: var(--g-space-6);
+}
+
+.auth-form__footer-text {
+  font-size: var(--g-font-size-sm);
+  color: var(--g-color-neutral-600);
+  margin: 0;
+}
+
+.auth-form__link {
+  background: none;
+  border: none;
+  color: var(--g-color-primary-600);
+  font-size: var(--g-font-size-sm);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.auth-form__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--g-color-neutral-50);
+  color: var(--g-color-neutral-600);
+  font-size: var(--g-font-size-base);
+}

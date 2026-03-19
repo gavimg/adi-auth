@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Input } from '@gadagi/design-system';
 import { authService } from './simpleAuthService';
-import './AuthForms.css';
+import './AuthForms.scss';
 
 interface RegisterFormProps {
   onSuccess?: (user: any) => void;
