@@ -1,4 +1,12 @@
-﻿import { AuthToken, LoginCredentials } from '@gadagi/types';
+﻿export interface AuthToken {
+  accessToken: string;
+  refreshToken: string;
+}
+
+export interface LoginCredentials {
+  email: string;
+  password: string;
+}
 
 const TOKEN_KEY  = 'gadagi_access_token';
 const REFRESH_KEY = 'gadagi_refresh_token';

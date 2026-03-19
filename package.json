@@ -1,24 +1,20 @@
 {
   "name": "@gadagi/auth",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Authentication utilities for gadagi micro-frontends",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
-    }
-  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "webpack --mode production && tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "build": "tsc -p tsconfig.build.json --emitDeclarationOnly && webpack --mode production",
     "dev": "webpack --mode development --watch",
-    "prepublishOnly": "npm run build"
+    "build:types": "tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "build:js": "webpack --mode production",
+    "build:prod": "tsc -p tsconfig.build.json --emitDeclarationOnly && webpack --mode production --stats-error-details",
+    "clean": "rm -rf dist"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -26,10 +22,11 @@
     "react-router-dom": "^6.0.0"
   },
   "dependencies": {
-    "@gadagi/types": "^1.0.1",
-    "@gadagi/design-system": "^1.0.1"
+    "@gadagi/design-system": "^1.0.6",
+    "@gadagi/types": "^1.0.1"
   },
   "devDependencies": {
+    "@gadagi/design-system": "^1.0.6",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.0.0",
     "react": "^19.0.0",

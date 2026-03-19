@@ -2,8 +2,29 @@
   createContext, useContext, useEffect,
   useReducer, ReactNode,
 } from 'react';
-import { AuthContextValue, AuthState, LoginCredentials } from '@gadagi/types';
+import { LoginCredentials } from './authService';
 import { authService } from './authService';
+
+export interface User {
+  id: string;
+  email: string;
+  firstName?: string;
+  lastName?: string;
+  role?: string;
+}
+
+export interface AuthState {
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  user: User | null;
+  error: string | null;
+}
+
+export interface AuthContextValue extends AuthState {
+  login: (credentials: LoginCredentials) => Promise<void>;
+  logout: () => void;
+  refreshToken: () => Promise<void>;
+}
 
 type AuthAction =
   | { type: 'LOGIN_START' }

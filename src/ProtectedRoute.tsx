@@ -1,8 +1,9 @@
 ﻿import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { UserRole } from '@gadagi/types';
 import { useAuth } from './useAuth';
 import { colors, spacing } from '@gadagi/design-system';
+
+type UserRole = 'admin' | 'user' | 'moderator';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
