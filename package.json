@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@gadagi/design-system": "^1.0.6",
-    "@gadagi/types": "^1.0.1"
+    "@gadagi/types": "^1.0.2"
   },
   "devDependencies": {
     "@gadagi/design-system": "^1.0.6",
@@ -35,6 +35,8 @@
     "ts-loader": "^9.0.0",
     "typescript": "^5.0.0",
     "webpack": "^5.0.0",
-    "webpack-cli": "^5.0.0"
+    "webpack-cli": "^5.0.0",
+    "css-loader": "^7.0.0",
+    "style-loader": "^4.0.0"
   }
 }

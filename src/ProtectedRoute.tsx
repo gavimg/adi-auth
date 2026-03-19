@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from './useAuth';
-import { colors, spacing } from '@gadagi/design-system';
+import './AuthForms.css';
 
 type UserRole = 'admin' | 'user' | 'moderator';
 
@@ -21,17 +21,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   if (isLoading) {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        backgroundColor: colors.neutral[50],
-        color: colors.neutral[600],
-        fontSize: '16px',
-      }}>
-        Loading...
-      </div>
+      <div className="auth-form__loading">Loading...</div>
     );
   }
 
